@@ -1,0 +1,11 @@
+case,B,N,hidden_size,num_heads,head_dim,intermediate_size,provider,expected_gemm_path,latency_ms,speedup_vs_torch
+tiny_n17_d64,1,17,256,4,64,512,torch_baseline,pytorch_linear,0.5615503915718624,1.0
+tiny_n17_d64,1,17,256,4,64,512,gemm_only,v1_tiled_transpose_b,0.6432378832000254,0.8730057825236003
+prefill_n128_d64,1,128,512,8,64,1024,torch_baseline,pytorch_linear,0.5602511569447474,1.0
+prefill_n128_d64,1,128,512,8,64,1024,gemm_only,v1_tiled_transpose_b,1.1345623290900029,0.4938037713574603
+prefill_n512_d64,1,512,512,8,64,1024,torch_baseline,pytorch_linear,0.6295909629099898,1.0
+prefill_n512_d64,1,512,512,8,64,1024,gemm_only,v1_tiled_transpose_b,2.879114133555715,0.21867523609855752
+prefill_n128_d128,1,128,512,4,128,1024,torch_baseline,pytorch_linear,0.6035725700777846,1.0
+prefill_n128_d128,1,128,512,4,128,1024,gemm_only,v1_tiled_transpose_b,1.161210170331991,0.5197789215928265
+prefill_n1024_d128,1,1024,512,4,128,1024,torch_baseline,pytorch_linear,0.7049306808516037,1.0
+prefill_n1024_d128,1,1024,512,4,128,1024,gemm_only,v1_tiled_transpose_b,5.29398267123164,0.13315696794443838
