@@ -2,7 +2,7 @@
 
 OperatorEngine 是一个用于学习 PyTorch 算子工程化的 C++/CUDA 扩展项目。第一条闭环从 Vector Add 开始，目标是把已有的 kernel 实验组织成可安装、可调度、可测试的 PyTorch 自定义算子，而不是继续堆叠独立的 `.cu` 示例。
 
-当前里程碑：Phase 0 到 Phase 6 已全部验收完成。项目已经形成安装、Dispatcher、current CUDA stream、correctness/opcheck、benchmark 和最小 Transformer Block 的完整闭环。最终工程验收见 `docs/phase6_acceptance.md`。
+当前里程碑：项目已经形成安装、Dispatcher、current CUDA stream、correctness/opcheck、benchmark 和最小 Transformer Block 的完整闭环。
 
 ## 首版支持矩阵
 
